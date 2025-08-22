@@ -45,3 +45,42 @@ blockquote {
   border-left: 4px solid #888;
   margin: 10px 0;
 }
+.moscow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.moscow-col {
+  background: #f4f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 150px;
+}
+
+.moscow-col h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.moscow-col.must { border-top: 5px solid #2e7d32; }   /* Verde */
+.moscow-col.should { border-top: 5px solid #fbc02d; } /* Amarelo */
+.moscow-col.could { border-top: 5px solid #0288d1; }  /* Azul */
+.moscow-col.wont { border-top: 5px solid #c62828; }   /* Vermelho */
+
+.moscow-col ul {
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+@media (max-width: 900px) {
+  .moscow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .moscow-grid {
+    grid-template-columns: 1fr;
+  }
+}
